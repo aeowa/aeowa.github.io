@@ -3,7 +3,8 @@ $(document).ready(function() {
   $.ionTabs("#tabs_1", {type: "none"});
 
   $('#form-smb').ajaxForm(function() { 
-                alert("Thank you for registration!"); 
+                alert("Thank you for registration!");
+                clearForm true;
             });
 
   $('#show').avgrund({
