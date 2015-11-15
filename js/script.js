@@ -4,7 +4,7 @@ $(document).ready(function() {
 
   $('#form-smb').ajaxForm(function() { 
                 alert("Thank you for registration!");
-                clearForm true;
+                clearForm: true
             });
 
   $('#show').avgrund({
