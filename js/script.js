@@ -2,8 +2,9 @@ $(document).ready(function() {
 
   $.ionTabs("#tabs_1", {type: "none"});
 
-  $('#form-smb').ajaxForm(function() { 
-                alert("Thank you for registration!"); 
+  $('#form-download').ajaxForm(function() { 
+                alert("Download link was sent to your e-mail");
+                clearForm: true
             });
 
   $('#show').avgrund({
