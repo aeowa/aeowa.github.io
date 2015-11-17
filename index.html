@@ -9,7 +9,9 @@
   <link rel="stylesheet" href="css/ion.tabs.skinBordered.css">
   <link rel="stylesheet" href="css/avgrund.css">
   <link rel="stylesheet" href="css/style.css">
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+  // <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 <body>
 
@@ -124,6 +126,28 @@
                       </label>
                       <input type="submit" value="Send" />
                     </form>
+
+<div id="messegeResult" class='text-center message-result'>Заполните форму заказа, и наш консультант свяжется с вами!</div>
+
+                    <form method="post" action="" id="formMain" name="formMain">
+              <div class="row">
+                
+                <div class="column6">
+                  <label for="name">Ваше имя<sup>*</sup></label>
+                  <input type="text" id='name' name='name' maxlength="30" autocomplete="off" required>
+                  <p><textarea id="order" rows="3" name="order" placeholder='Описание заказа' required></textarea></p>
+                </div>
+                
+                <div class="column6">
+                  <label for="telephone">Телефон<sup>*</sup></label>
+                  <input type="Tel" id='telephone' name='telephone' maxlength="30" autocomplete="off" required>
+                  <label for="e-mail">E-mail<sup>*</sup></label>
+                  <input type="email" id='email' name='email' maxlength="30" autocomplete="off" required>
+                  <button type='button' id='button' class="send-message pull-right" onclick="AjaxFormRequest('messegeResult', 'formMain', 'form.php')">Заказать</button>
+                </div>
+              </div>
+            </form>
+
                   </div>
                 </div>
               </div>
