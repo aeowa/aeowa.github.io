@@ -3,7 +3,7 @@
 <head>
   <meta charset=" UTF-8">
   <title>Veeam</title>
-  <link href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/ion.tabs.css">
   <link rel="stylesheet" href="css/ion.tabs.skinBordered.css">
@@ -24,13 +24,8 @@
               <img src="img/veeam_logo.png" alt="Veeam-logo">
             </a>
           </div>
-          <div class="column5">
-          </div>
-          <div class="column3">
-            <p class="slogan">Modern <span class="slogan-p2">Data Protection</span><span class="slogan-p3">Built for Virtualization</span></p>
-          </div>
-          <div class="column2">
-            <h1 class="page-heading">#1 VM Backup</h1>
+          <div class="column10">
+            <img src="img/mdb_n1_backup.png" alt="" class='slogan'>
           </div>
         </div>
       </div>
@@ -38,18 +33,16 @@
 
     <section class="breadcrumbs">
       <div class="container">
-        <div class="column12">
-          <a href="" class="parent-crumb">White Papers</a>
-          <span class="icon-angle-double-right"></span>
-          <span class="current-crumb">Annual Data Protection Report</span>
-        </div>
+        <a href="#" class="parent-crumb">White Papers</a>
+        <span class="icon-angle-double-right"></span>
+        <span class="current-crumb">Annual Data Protection Report</span>
       </div>
     </section>
   </header>
 
   <main>
-    <section class="page-tabs">
-      <div class="container">
+    <div class="container">
+      <section class="page-tabs">
         <div class="ionTabs" id="tabs_1" data-name="Enterprise_and_SMB_Editions">
           <ul class="ionTabs__head">
               <li class="ionTabs__tab" data-target="SMB_Edition">SMB Edition</li>
@@ -61,7 +54,7 @@
 
               <div class="ionTabs__item" data-name="SMB_Edition">
                 <section class="banner">
-                  <h2 class="article-heading">Annual Data Protection Report 2013: <span class="yellow-heading">Enterprise and SMB Editions</span></h2>
+                  <h1 class="article-heading">Annual Data Protection Report 2013: <span class="yellow-heading">Enterprise and SMB Editions</span></h1>
                   <p class="article-subheading">Survey of 500 enterprises and 500 small / medium businesses across USA, UK, Germany and France</p>
                 </section>
 
@@ -79,7 +72,7 @@
                         <div class="column5">
                           <a href="#" id="show" class="button-click-image">
                             <img src="img/annual-smb-report.jpg" alt="" width="100%">
-                            <img src="img/click-image.png" alt="">
+                            <img src="img/click-image.png" alt="" class='click-image'>
                           </a>
                         </div>
                         <div class="column7">
@@ -105,12 +98,12 @@
                   <div class="column5">
                     <form id="form-download" action="comment.php" method="get" class="form-download-copy">
                       <h3 class="form-heading">Download Your Copy</h3>
-                      <label for="first-name">First Name<sup>*</sup></label>
-                      <input type="text" id="first-name" name="first-name" autocomplete="off" required>
-                      <label for="last-name">Last Name<sup>*</sup></label>
-                      <input type="text" id="last-name" name="last-name" autocomplete="off" required>
-                      <label for="email">Business email<sup>*</sup></label>
-                      <input type="email" id="email" name="email" autocomplete="off" required>
+                      <label for="first-name">First Name<sup>*</sup>
+                      <input type="text" id="first-name" name="first-name" autocomplete="off" required></label>
+                      <label for="last-name">Last Name<sup>*</sup>
+                      <input type="text" id="last-name" name="last-name" autocomplete="off" required></label>
+                      <label for="email">Business email<sup>*</sup>
+                      <input type="email" id="email" name="email" autocomplete="off" required></label>
                       <label for="country">Country<sup>*</sup>
                         <select name="country" autocomplete="off" onchange="addState(this)" required>
                           <option value="Russia">Russia</option>
@@ -139,7 +132,7 @@
 
               <div class="ionTabs__item" data-name="Enterprise_Edition">
                 <section class="banner">
-                  <h2 class="article-heading">Annual Data Protection Report 2013: <span class="yellow-heading">Enterprise and SMB Editions</span></h2>
+                  <h1 class="article-heading">Annual Data Protection Report 2013: <span class="yellow-heading">Enterprise and SMB Editions</span></h1>
                   <p class="article-subheading">Survey of 500 enterprises and 500 small / medium businesses across USA, UK, Germany and France</p>
                 </section>
 
@@ -155,7 +148,7 @@
                         <div class="column5">
                           <a href="#" id="show2" class="button-click-image">
                             <img src="img/preview-annual-dp-report.png" alt="" width="100%">
-                            <img src="img/click-image.png" alt="">
+                            <img src="img/click-image.png" alt="" class='click-image'>
                           </a>
                         </div>
                         <div class="column7">
@@ -208,8 +201,8 @@
               <div class="ionTabs__preloader"></div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   </main>
 
 <!-- FOOTER -->
@@ -217,18 +210,15 @@
   <footer>
     <div class="container">
       <div class="row">
-        <div class="column6">
+        <div class="column12">
           <nav>
             <ul>
               <li><a href="#" class="nav-item">White Papers</a>   |   </li>
               <li><a href="#" class="nav-item">Virtualisation Webinars</a>   |   </li>
               <li><a href="#" class="nav-item">Product Demos</a>   |   </li>
-              <li><a href="#" class="nav-item">Contact Sales</a>   |   </li>
+              <li><a href="#" class="nav-item">Contact Sales</a></li>
             </ul>
           </nav>
-        </div>
-        <div class="column6">
-          
         </div>
         <div class="column12">
           <p class="copyright">Copyright © 2013 Veeam <sup>®</sup> Software. <a href="#" class="privacy-policy">Privacy policy</a></p>
