@@ -5,7 +5,7 @@ $(document).ready(function() {
 
 // FORM AJAX
   $('#form-download').ajaxForm(function() { 
-      alert("Download link was sent to your e-mail");
+      alert("Thank you! Download link will be sent to your e-mail.");
       document.getElementById('form-download').reset();
   });
 
@@ -41,10 +41,6 @@ function addState(combo){
    document.getElementById('state').style.display = 'none';
    }
  }
-
-
-// FORM
-
 
 
 
