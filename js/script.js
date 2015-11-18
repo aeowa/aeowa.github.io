@@ -4,9 +4,14 @@ $(document).ready(function() {
   $.ionTabs("#tabs_1", {type: "none"});
 
 // FORM AJAX
-  $('#form-download').ajaxForm(function() { 
+  $('#form-download-smb').ajaxForm(function() { 
       alert("Thank you! Download link will be sent to your e-mail.");
-      document.getElementById('form-download').reset();
+      document.getElementById('form-download-smb').reset();
+  });
+
+  $('#form-download-enterprise').ajaxForm(function() { 
+      alert("Thank you! Download link will be sent to your e-mail.");
+      document.getElementById('form-download-enterprise').reset();
   });
 
 // POPUP
