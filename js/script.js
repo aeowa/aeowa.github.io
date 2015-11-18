@@ -37,6 +37,9 @@ $(document).ready(function() {
                     }
       });
 
+  Socialite.load(context);
+  Socialite.process();
+
 });
 
 // ADD SELECT 
