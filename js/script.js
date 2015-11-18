@@ -10,25 +10,27 @@ $(document).ready(function() {
   });
 
 // POPUP
-  $('#show').avgrund({
-      height: 400,
-      width: 800,
-      holderClass: 'custom',
-      showClose: true,
-      showCloseText: 'close',
-      onBlurContainer: '.container',
-      template: '<iframe width="600" height="350" src="https://www.youtube.com/embed/klModGpSKtc" frameborder="0" allowfullscreen></iframe>'
-    });
 
-  $('#show2').avgrund({
-      height: 400,
-      width: 800,
-      holderClass: 'custom',
-      showClose: true,
-      showCloseText: 'close',
-      onBlurContainer: '.container',
-      template: '<iframe width="600" height="350" src="https://www.youtube.com/embed/klModGpSKtc" frameborder="0" allowfullscreen></iframe>'
-    });
+  $('.fancybox-media').fancybox({
+    openEffect  : 'fade',
+    closeEffect : 'fade',
+    closeBtn : true,
+    width: 600,
+    height: 400,
+    helpers : {
+              media: true,
+              overlay : {
+                closeClick: true,
+                speedOut: 200,
+                showEarly: true,
+                locked: true
+                        }
+              },
+          youtube : {
+              autoplay: 0,
+              modal: true
+                    }
+      });
 
 });
 
