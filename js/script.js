@@ -4,15 +4,15 @@ $(document).ready(function() {
   $.ionTabs("#tabs_1", {type: "none"});
 
 // FORM AJAX
-  $('#form-download-smb').ajaxForm(function() { 
-      alert("Thank you! Download link will be sent to your e-mail.");
-      document.getElementById('form-download-smb').reset();
-  });
+  // $('#form-download-smb').ajaxForm(function() { 
+  //     alert("Thank you! Download link will be sent to your e-mail.");
+  //     document.getElementById('form-download-smb').reset();
+  // });
 
-  $('#form-download-enterprise').ajaxForm(function() { 
-      alert("Thank you! Download link will be sent to your e-mail.");
-      document.getElementById('form-download-enterprise').reset();
-  });
+  // $('#form-download-enterprise').ajaxForm(function() { 
+  //     alert("Thank you! Download link will be sent to your e-mail.");
+  //     document.getElementById('form-download-enterprise').reset();
+  // });
 
 // POPUP
 
@@ -48,6 +48,29 @@ function addState(combo){
    document.getElementById('state').style.display = 'none';
    }
  }
+
+
+// AJAX FORM
+ function AjaxForm(result_id,formDownloadSmb,url) {
+          jQuery.ajax({
+              url:     url,
+              type:     "POST",
+              dataType: "html",
+              data: jQuery("#"+formDownloadSmb).serialize(), 
+              success: function(response) {
+              document.getElementById(result_id).innerHTML = response;
+          },
+          error: function(response) {
+          document.getElementById(result_id).innerHTML = "<p>Cообщение не отправлено. Пожалуйста, попробуйте еще раз!</p>";
+          }
+       });
+
+       $(':input','#formDownloadSmb')
+  .not(':button, :submit, :reset, :hidden')
+  .val('')
+  .removeAttr('checked')
+  .removeAttr('selected');
+    }
 
 
 

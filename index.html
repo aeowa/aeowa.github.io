@@ -95,7 +95,7 @@
   <!-- TAB-1 FORM -->
 
                   <div class="column5">
-                    <form id="form-download-smb" action="data.txt" method="post" class="form-download-copy">
+                    <form id="formDownloadSmb" action="data.txt" method="get" class="form-download-copy">
                       <h3 class="form-heading">Download Your Copy</h3>
                       <label for="first-name">First Name<sup>*</sup>
                       <input type="text" id="first-name" name="first-name" autocomplete="off" required></label>
@@ -121,7 +121,8 @@
                           <option value="California">California</option>
                         </select>
                       </label>
-                      <input type="submit" value="Send" />
+                      <input type="submit" value="Send" onclick="AjaxForm('messegeResult', 'formDownloadSmb', 'form.php')"/>
+                      <div id="messegeResult" class='message-result'></div>
                     </form>
                   </div>
                 </div>
@@ -166,7 +167,7 @@
   <!-- TAB-2 FORM -->
 
                   <div class="column5">
-                    <form id="form-download-enterprise" action="data.txt" method="post" class="form-download-copy">
+                    <form id="form-download-enterprise" action="mailto:aeowa@mail.ru" method="get" class="form-download-copy">
                       <h3 class="form-heading">Download Your Copy</h3>
                       <label for="first-name">First Name<sup>*</sup></label>
                       <input type="text" id="first-name" name="first-name" autocomplete="off" required>
