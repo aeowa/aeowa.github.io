@@ -1,3 +1,3 @@
 <?
-chmod ("comment.php", 722);
+chmod ("data.txt", 722);
 ?>
