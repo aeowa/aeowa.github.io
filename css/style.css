@@ -12,6 +12,8 @@ li {
 body {
   font-family: 'Open Sans', sans-serif;
   margin: 0 auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
   color: #333;
@@ -24,6 +26,8 @@ body {
 div[class*="column"] {
   float: left;
   padding: 17px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 .row {
@@ -79,16 +83,7 @@ div[class*="column"] {
   font-weight: normal;
   font-style: normal;
 }
-/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
-/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
-/*
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-  @font-face {
-    font-family: 'fontello';
-    src: url('../font/fontello.svg?87629472#fontello') format('svg');
-  }
-}
-*/
+
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
   font-family: "fontello";
@@ -100,22 +95,12 @@ div[class*="column"] {
   width: 1em;
   margin-right: .2em;
   text-align: center;
-  /* opacity: .8; */
-  /* For safety - reset parent styles, that can break glyph codes*/
   font-variant: normal;
   text-transform: none;
-  /* fix buttons height, for twitter bootstrap */
   line-height: 1em;
-  /* Animation center compensation - margins should be symmetric */
-  /* remove if not needed */
   margin-left: .2em;
-  /* you can be more comfortable with increased icons size */
-  /* font-size: 120%; */
-  /* Font smoothing. That was taken from TWBS */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* Uncomment for 3D effect */
-  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 .icon-angle-double-right:before {
   content: '\e800';
@@ -152,6 +137,7 @@ div[class*="column"] {
   top: -5px;
 }
 .breadcrumbs .container {
+  background-image: -webkit-linear-gradient(bottom, #05a305 5%, #09b00a 95%);
   background-image: linear-gradient(to top, #05a305 5%, #09b00a 95%);
   height: 35px;
   border-radius: 1px;
@@ -253,6 +239,8 @@ div[class*="column"] {
 .form-download-copy {
   background-color: #f4f4f4;
   margin: 8px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -269,6 +257,8 @@ label {
   line-height: 35px;
   margin-top: 7px;
   padding: 0 15px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 input,
@@ -280,6 +270,8 @@ select {
   box-shadow: 0 0 3px 0 #eaeaea;
   border-radius: 3px;
   padding: 5px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   font-size: 14px;
 }
@@ -290,6 +282,8 @@ span.star {
 .submit-button {
   width: 165px;
   height: 45px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   color: #fff;
   text-align: center;
@@ -298,6 +292,7 @@ span.star {
   border: 1px solid  #70bb70;
   box-shadow: -1px 1px 2px #5b885d, inset -1px -1px 2px #00a116;
   font-size: 22px;
+  background-image: -webkit-linear-gradient(bottom, #00ad1c, #4dbd40);
   background-image: linear-gradient(to top, #00ad1c, #4dbd40);
   text-shadow: 2px 1px 1px #088a0e, 0 0 4px #31ae30;
   border-bottom-color: #0f7f1b;
@@ -323,6 +318,37 @@ footer li {
 .privacy-policy {
   color: #62b9dc;
   text-decoration: none;
+}
+.social-buttons {
+  float: right;
+}
+.social-buttons > li {
+  padding: 0 5px;
+  float: right;
+}
+.social-buttons .socialite {
+  display: inline-block;
+  background: url('../img/social-sprite.png') 0 0 no-repeat;
+  height: 20px;
+}
+.social-buttons .socialite-loaded {
+  background: none !important;
+}
+.social-buttons .twitter-share {
+  width: 55px;
+  background-position: 0 0;
+}
+.social-buttons .googleplus-one {
+  width: 31px;
+  background-position: -75px 0;
+}
+.social-buttons .facebook-like {
+  width: 50px;
+  background-position: -145px 0;
+}
+.social-buttons .linkedin-share {
+  width: 60px;
+  background-position: -215px 0;
 }
 @media (min-width: 960px) and (max-width: 1024px) {
   .container {
@@ -472,6 +498,8 @@ footer li {
   .form-download-copy {
     background-color: #fff;
     margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
     overflow: hidden;
   }
@@ -506,8 +534,17 @@ footer li {
     height: 0px;
     padding: 0;
   }
-  .column10 .slogan {
-    display: none;
+  .veeam-logo {
+    width: 100%;
+    padding-bottom: 0 !important;
+  }
+  .veeam-slogan {
+    width: 100%;
+    float: right;
+    padding: 0;
+  }
+  .slogan {
+    width: 300px;
   }
   .tab {
     display: block;
@@ -546,7 +583,11 @@ footer li {
   .privacy-policy {
     display: block;
   }
-  footer nav {
+  footer .nav {
     text-align: center;
+    width: 100%;
+  }
+  .socials {
+    width: 300px;
   }
 }
