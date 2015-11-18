@@ -61,7 +61,7 @@
 
   <!-- TAB-1 ARTICLE -->
 
-                  <div class="column7">
+                  <div class="column7 tab">
                     <article class="related-content">
                       <h3 class="article-title">SMB Edition</h3>
                       <h4 class="article-subtitle">85% of SMBs Experiencing Problems with Backup and Recovery</h4>
@@ -74,7 +74,7 @@
                             <img src="img/click-image.png" alt="" class='click-image'>
                           </a>
                         </div>
-                        <div class="column7">
+                        <div class="column7 key-features">
                           <ul>
                             <li>85% of SMBs are experiencing cost-related challenges with backup and recovery, 83% with capability and 80% with complexity</li>
                             <li>67% of the virtual environment is backed-up meaning that almost a third of SMBs’ virtual infrastructure is unprotected</li>
@@ -83,7 +83,7 @@
                           </ul>
                         </div>
                       </div>
-                      <h5>Infographics - SMB challenges with data protection in brief</h5>
+                      <h5 class='infographics-title'>Infographics - SMB challenges with data protection in brief</h5>
                       <div class="infographics-preview">
                         <img src="img/smb_ingographics_web_preview_1_cut.png" alt="">
                         <img src="img/smb_ingographics_web_preview_2_cut.png" alt="">
@@ -94,36 +94,39 @@
 
   <!-- TAB-1 FORM -->
 
-                  <div class="column5">
-                    <form id="formDownloadSmb" action="data.txt" method="get" class="form-download-copy">
-                      <h3 class="form-heading">Download Your Copy</h3>
-                      <label for="first-name">First Name<sup>*</sup>
-                      <input type="text" id="first-name" name="first-name" autocomplete="off" required></label>
-                      <label for="last-name">Last Name<sup>*</sup>
-                      <input type="text" id="last-name" name="last-name" autocomplete="off" required></label>
-                      <label for="email">Business email<sup>*</sup>
-                      <input type="email" id="email" name="email" autocomplete="off" required></label>
-                      <label for="country">Country<sup>*</sup>
-                        <select name="country" autocomplete="off" onchange="addState(this)" required>
-                          <option value="Russia">Russia</option>
-                          <option value="USA">USA</option>
-                          <option value="Canada">Canada</option>
-                          <option value="Brazil">Brazil</option>
-                          <option value="UK">UK</option>
-                        </select>
-                      </label>
-                      <label for="state" id="state" style="display:none">State<sup>*</sup>
-                        <select name="state" autocomplete="off">
-                          <option value="Alabama">Alabama</option>
-                          <option value="Alaska">Alaska</option>
-                          <option value="Arizona">Arizona</option>
-                          <option value="Arkansas">Arkansas</option>
-                          <option value="California">California</option>
-                        </select>
-                      </label>
-                      <input type="submit" value="Send" onclick="AjaxForm('messegeResult', 'formDownloadSmb', 'form.php')"/>
-                      <div id="messegeResult" class='message-result'></div>
-                    </form>
+                  <div class="column5 form">
+                    <div class="form-wrap">
+                      <form id="form-download-smb" action="comment.php" method="get" class="form-download-copy">
+                        <h3 class="form-heading">Download Your Copy</h3>
+                        <label for="first-name">First Name<span class="star">*</span>
+                        <input type="text" id="first-name" name="first-name" autocomplete="off" required></label>
+                        <label for="last-name">Last Name<span class="star">*</span>
+                        <input type="text" id="last-name" name="last-name" autocomplete="off" required></label>
+                        <label for="email">Business email<span class="star">*</span>
+                        <input type="email" id="email" name="email" autocomplete="off" required></label>
+                        <label for="country">Country<span class="star">*</span>
+                          <select name="country" autocomplete="off" onchange="addState(this)" required>
+                            <option value="Select Country">Select Country</option>
+                            <option value="Russia">Russia</option>
+                            <option value="USA">USA</option>
+                            <option value="Canada">Canada</option>
+                            <option value="Brazil">Brazil</option>
+                            <option value="UK">UK</option>
+                          </select>
+                        </label>
+                        <label for="state" id="state" style="display:none; width: 100%">State<span class="star">*</span>
+                          <select name="state" autocomplete="off">
+                            <option value="Select State">Select State</option>
+                            <option value="Alabama">Alabama</option>
+                            <option value="Alaska">Alaska</option>
+                            <option value="Arizona">Arizona</option>
+                            <option value="Arkansas">Arkansas</option>
+                            <option value="California">California</option>
+                          </select>
+                        </label>
+                        <button type="submit" value="Send" class="submit-button"/>Download</button>
+                      </form>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -140,7 +143,7 @@
 
   <!-- TAB-2 ARTICLE -->
 
-                  <div class="column7">
+                  <div class="column7 tab">
                     <article class="related-content">
                       <h3 class="article-title">Enterprise Edition</h3>
                       <h4 class="article-subtitle">CIO study Shows Capability, Complexity and Cost Issues Hampering IT Departments</h4>
@@ -151,7 +154,7 @@
                             <img src="img/click-image.png" alt="" class='click-image'>
                           </a>
                         </div>
-                        <div class="column7">
+                        <div class="column7 key-features">
                           <p>Key findings:</p>
                           <ul>
                             <li>68% of CIOs feel that their backup and recovery tools will become less effective as the amount of data and servers in their organization grows</li>
@@ -160,41 +163,44 @@
                           </ul>
                         </div>
                       </div>
-                      <p>Download the <b>full report</b> to learn more and get the <b>previous editions</b> (2011 and 2010)</p>
-                    </article>
+                      <p class="download-full-report">Download the <b>full report</b> to learn more and get the <b>previous editions</b> (2011 and 2010)</p>
                   </div>
 
   <!-- TAB-2 FORM -->
 
-                  <div class="column5">
-                    <form id="form-download-enterprise" action="mailto:aeowa@mail.ru" method="get" class="form-download-copy">
-                      <h3 class="form-heading">Download Your Copy</h3>
-                      <label for="first-name">First Name<sup>*</sup></label>
-                      <input type="text" id="first-name" name="first-name" autocomplete="off" required>
-                      <label for="last-name">Last Name<sup>*</sup></label>
-                      <input type="text" id="last-name" name="last-name" autocomplete="off" required>
-                      <label for="email">Business email<sup>*</sup></label>
-                      <input type="email" id="email" name="email" autocomplete="off" required>
-                      <label for="country">Country<sup>*</sup>
-                        <select name="country" autocomplete="off" onchange="addState(this)" required>
-                          <option value="Russia">Russia</option>
-                          <option value="USA">USA</option>
-                          <option value="Canada">Canada</option>
-                          <option value="Brazil">Brazil</option>
-                          <option value="UK">UK</option>
-                        </select>
-                      </label>
-                      <label for="state" id="state" style="display:none">State<sup>*</sup>
-                        <select name="state" autocomplete="off">
-                          <option value="Alabama">Alabama</option>
-                          <option value="Alaska">Alaska</option>
-                          <option value="Arizona">Arizona</option>
-                          <option value="Arkansas">Arkansas</option>
-                          <option value="California">California</option>
-                        </select>
-                      </label>
-                      <input type="submit" value="Send" />
-                    </form>
+                  <div class="column5 form">
+                    <div class="form-wrap">
+                      <form id="form-download-enterprise" action="comment.php" method="get" class="form-download-copy">
+                        <h3 class="form-heading">Download Your Copy</h3>
+                        <label for="first-name">First Name<span class="star">*</span>
+                        <input type="text" id="first-name" name="first-name" autocomplete="off" required></label>
+                        <label for="last-name">Last Name<span class="star">*</span>
+                        <input type="text" id="last-name" name="last-name" autocomplete="off" required></label>
+                        <label for="email">Business email<span class="star">*</span>
+                        <input type="email" id="email" name="email" autocomplete="off" required></label>
+                        <label for="country">Country<span class="star">*</span>
+                          <select name="country" autocomplete="off" onchange="addState1(this)" required>
+                            <option value="Select Country">Select Country</option>
+                            <option value="Russia">Russia</option>
+                            <option value="USA">USA</option>
+                            <option value="Canada">Canada</option>
+                            <option value="Brazil">Brazil</option>
+                            <option value="UK">UK</option>
+                          </select>
+                        </label>
+                        <label for="state" id="state1" style="display:none; width: 100%">State<span class="star">*</span>
+                          <select name="state" autocomplete="off">
+                            <option value="Select State">Select State</option>
+                            <option value="Alabama">Alabama</option>
+                            <option value="Alaska">Alaska</option>
+                            <option value="Arizona">Arizona</option>
+                            <option value="Arkansas">Arkansas</option>
+                            <option value="California">California</option>
+                          </select>
+                        </label>
+                        <button type="submit" class="submit-button"/>Download</button>
+                      </form>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -232,7 +238,7 @@
 <script type="text/javascript" src="js/script.js"></script>
 <script type="text/javascript" src="js/ion.tabs.min.js"></script>
 <script type="text/javascript" src="js/jquery.fancybox.pack.js?v=2.1.5"></script>
-<script type="text/javascript" src="js/jquery.fancybox-media.js?v=1.0.6"></script>
 <script type="text/javascript" src="js/jquery.form.js"></script>
+<script type="text/javascript" src="js/jquery.fancybox-media.js?v=1.0.6"></script>
 </body>
 </html>

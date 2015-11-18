@@ -11,7 +11,8 @@
     }
 
     .ionTabs__tab {
-        font-size: 12px; line-height: 13px;
+        font-size: 13px !important;
+        line-height: 13px;
         background: #ededed;
         border: 1px solid #cecece;
         border-bottom: none;
